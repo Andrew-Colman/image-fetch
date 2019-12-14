@@ -19,7 +19,7 @@ function App() {
             <h1 class="display-4">Welcome</h1>
             <p class="lead">to Spectral apps fetch project</p>
             
-            <p>Content</p>
+            <p>Description:</p>
 
           </div>
           <hr />
