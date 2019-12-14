@@ -1,4 +1,4 @@
-
+**under development**
 
 ## Project Description
 
@@ -19,3 +19,4 @@ using own form validation with react hooks ( no need to use 3rd party packages, 
 
 
 
+**Pixabay is a large image repository, with public domain license (cc0)**
