@@ -1,8 +1,8 @@
 import React,{useRef} from 'react';
 import PixImage from './components/PixImage';
 import Forms from './components/Forms';
-
-
+import Footer from './layout/Footer'
+import Header from './layout/Header'
 
 const scrollToRef = (ref) => window.scrollTo({
   top:ref.current.offsetTop, 
@@ -13,24 +13,13 @@ function App() {
   const executeScroll = () => scrollToRef(myRef)
   return (
     <div className="App container-fluid bg-dark">
-        <div className="row">
-        <div className="col bg-dark text-center text-white">
-          <div class="jumbotron bg-dark">
-            <h1 class="display-4">Welcome</h1>
-            <p class="lead">to Spectral apps fetch project</p>
-            
-            <p>Description:</p>
-
-          </div>
-          <hr />
-        </div>
-        </div>
+      <Header />
 
         <div className="row mt-2">
         <div id="search" className="col bg-dark text-center text-white">
         
-    <Forms scroll={executeScroll} value="yellow" />
-    <hr />
+        <Forms scroll={executeScroll} value="yellow" />
+        <hr />
         </div>
         </div>
         <div className="row">
@@ -38,14 +27,7 @@ function App() {
           <PixImage />
           </div>
         </div>
-        <div className="row mt-2">
-          <div className="col text-center text-white mb-2">
-          <hr />
-          <small className="text-primary"> &copy; Spectral Apps </small>
-          </div>
-        </div>
-       
-        
+      <Footer />
     </div>
   );
 }
