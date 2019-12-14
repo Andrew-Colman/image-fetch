@@ -1,0 +1,11 @@
+.PixImage{
+        max-width: 300px !important;
+        height:200px !important;
+    }
+    
+@media screen and (max-width: 500px) {
+.PixImage{
+    max-width: 200px !important;
+    height:100px !important;
+}
+}
