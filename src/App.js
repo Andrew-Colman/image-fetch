@@ -38,6 +38,12 @@ function App() {
           <PixImage />
           </div>
         </div>
+        <div className="row mt-2">
+          <div className="col text-center text-white mb-2">
+          <hr />
+          <small className="text-primary"> &copy; Spectral Apps </small>
+          </div>
+        </div>
        
         
     </div>
