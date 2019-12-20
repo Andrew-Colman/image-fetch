@@ -20,4 +20,4 @@ custom react hook: own form validation (no need to use 3rd party packages, like 
 Bootstrap 4 and own custom css 
 
 
-**Pixabay is a free image repository, with public domain license images (CC0)**
+> **[Pixabay](https://pixabay.com/) is a free public domain image repository (CC0)**
