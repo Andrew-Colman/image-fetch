@@ -1,5 +1,5 @@
 **under development**
-
+*search options*
 ## Project Description
 
 This App fetch pixabay api information with axios
