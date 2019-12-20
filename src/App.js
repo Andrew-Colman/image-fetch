@@ -1,8 +1,10 @@
-import React,{useRef} from 'react';
+import React, {useRef} from 'react';
 import PixImage from './components/PixImage';
 import Forms from './components/Forms';
 import Footer from './layout/Footer'
 import Header from './layout/Header'
+
+require('dotenv').config()
 
 const scrollToRef = (ref) => window.scrollTo({
   top:ref.current.offsetTop, 

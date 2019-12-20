@@ -5,10 +5,13 @@
   "homepage": "https://spectralapps.github.io/fetch/",
   "dependencies": {
     "axios": "^0.19.0",
+    "dotenv": "^8.2.0",
     "gh-pages": "^2.1.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-scripts": "3.2.0",
+    "react-spring": "^8.0.27",
+    "reactstrap": "^8.2.0",
     "serialize-javascript": "^2.1.2"
   },
   "scripts": {

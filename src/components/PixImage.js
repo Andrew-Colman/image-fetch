@@ -15,7 +15,7 @@ export default function PixImage(props) {
      const [isLoading, setIsLoading] = useState(false);
      const [isError, setIsError] = useState(false);
 
-    const API_KEY = '14263556-460dd996bd11666b3aafc8d29';
+    const API_KEY = process.env.REACT_APP_API_KEY;
     const URL = "https://pixabay.com/api/?key="+API_KEY+"&q="+encodeURIComponent(query)+"&image_type"+image_type+"editors_choice=true"+"&colors="+colors;
 
     useEffect(() => {
