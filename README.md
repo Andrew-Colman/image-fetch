@@ -1,22 +1,23 @@
 **under development**
-*search options*
+ *search options*
 ## Project Description
 
-This App fetch pixabay api information with axios
+This React App fetch pixabay api information with axios
 
 user can search a image with options
 
-then display the results (Images,Author , number of downloads)
+then display the results (Images, Author, number of downloads)
 
-user can download the picture 
+user can download the Images
 
 ### React Hooks:
 
-used: useState,useEffect, useRef
+used: useState, useEffect, useRef, useContext
 
-using own form validation with react hooks ( no need to use 3rd party packages, like formik) 
+custom react hook: own form validation (no need to use 3rd party packages, like formik) 
+
+#### Style:
+Bootstrap 4 and own custom css 
 
 
-
-
-**Pixabay is a large image repository, with public domain license (cc0)**
+**Pixabay is a free image repository, with public domain license images (CC0)**
