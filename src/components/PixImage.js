@@ -5,16 +5,17 @@ import "./PixImage.css"
 const axios = require('axios');
 
 export default function PixImage(props) {
-    
+    //Api data
     const [data, setData] = useState({ hits: [] });
 
      const [colors,setColors] = useState(null);
      const [image_type,setImage_type] = useState("photo");
      const [query,setQuery] = useState("query");
      const [quantity, setQuantity] = useState(12);
+     // Loading / error states
      const [isLoading, setIsLoading] = useState(false);
      const [isError, setIsError] = useState(false);
-
+    //Uri
     const API_KEY = process.env.REACT_APP_API_KEY;
     const URL = "https://pixabay.com/api/?key="+API_KEY+"&q="+encodeURIComponent(query)+"&image_type"+image_type+"editors_choice=true"+"&colors="+colors;
 
@@ -35,7 +36,7 @@ export default function PixImage(props) {
         fetchData();
       }, [URL]);
      
-     console.log(data.hits)
+     //console.log(data.hits)
     return (
         <div className="row">
 

@@ -25,7 +25,7 @@ export default function Forms(props) {
                     pattern="[0-9]*"
                     placeholder="results"
                     min="1" max="20"
-                    onKeyDown={e => /[\+\-\.\,]$/.test(e.key) && e.preventDefault()}/>
+                    onKeyDown={e => /[+-.,]$/.test(e.key) && e.preventDefault()}/>
           <br /> <label> <input name="imgType" value="Photo" type="radio" checked={props.Image_type === "Photo" } onChange={props.setImage_type} /> Photo </label>
           <br /> <label> <input name="imgType" value="Illustration" type="radio" checked={props.Image_type === "Illustration" } onChange={props.setImage_type} /> Illustration </label>
           <br /> <label> <input name="imgType" value="Vector" type="radio" checked={props.Image_type === "Vector" } onChange={props.setImage_type} /> Vector </label>
