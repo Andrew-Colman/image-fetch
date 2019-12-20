@@ -1,6 +1,7 @@
-import React, {useState,useEffect} from 'react'
+import React, {useState,useEffect, useContext} from 'react'
 
 import "./PixImage.css"
+import { GalleryContext } from './GalleryContext';
 
 const axios = require('axios');
 
@@ -8,16 +9,13 @@ export default function PixImage(props) {
     //Api data
     const [data, setData] = useState({ hits: [] });
 
-     const [colors,setColors] = useState(null);
-     const [image_type,setImage_type] = useState("photo");
-     const [query,setQuery] = useState("query");
-     const [quantity, setQuantity] = useState(12);
+    const context = useContext(GalleryContext);
      // Loading / error states
      const [isLoading, setIsLoading] = useState(false);
      const [isError, setIsError] = useState(false);
     //Uri
     const API_KEY = process.env.REACT_APP_API_KEY;
-    const URL = "https://pixabay.com/api/?key="+API_KEY+"&q="+encodeURIComponent(query)+"&image_type"+image_type+"editors_choice=true"+"&colors="+colors;
+    const URL = "https://pixabay.com/api/?key="+API_KEY+"&q="+encodeURIComponent(context.query)+"&image_type"+context.quantity+"editors_choice=true&colors="+context;
 
     useEffect(() => {
         const fetchData = async () => {
@@ -39,10 +37,10 @@ export default function PixImage(props) {
      //console.log(data.hits)
     return (
         <div className="row">
-
+            <h1>{context}</h1>
             {isError && <div>Something went wrong ...</div>}
             {isLoading ? (<div>Loading ...</div>) : ( <>
-      {data.hits.slice(0,quantity).map(img => (
+      {data.hits.slice(0,context.quantity).map(img => (
         
         <div className="col-6 col-sm-3 p-3 text-center">
         <div className="card">
