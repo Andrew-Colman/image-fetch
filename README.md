@@ -2,6 +2,9 @@
 
 This React App fetch pixabay api information with axios
 
+*https://spectralapps.github.io/fetch/*
+
+
 users can search images and choose image colors, image type(photo/vector/illlustrarion), limit the results (max 20)
 and then the App displays the results (Images, Author, number of downloads) (Download any Image)
 
