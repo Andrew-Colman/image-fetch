@@ -1,14 +1,11 @@
-**under development**
- *search options*
 ## Project Description
 
 This React App fetch pixabay api information with axios
 
-user can search a image with options
+users can search images and choose image colors, image type(photo/vector/illlustrarion), limit the results (max 20)
+and then the App displays the results (Images, Author, number of downloads) (Download any Image)
 
-then display the results (Images, Author, number of downloads)
 
-user can download the Images
 
 ### React Hooks:
 
