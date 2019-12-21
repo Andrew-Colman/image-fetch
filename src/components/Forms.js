@@ -1,24 +1,21 @@
-import React, {useState, useContext, createContext} from 'react'
+import React, {useContext} from 'react'
 import { GalleryContext } from './GalleryContext';
 
-
+const API_KEY = process.env.REACT_APP_API_KEY;
 
 export default function Forms(props) {
 
-const context = useContext(GalleryContext);
+const [values, setValues] = useContext(GalleryContext);
 
-const [values, setValues] = useState(
-  {"query": "girl",
-  "quantity": 12,
-  "image_type": "photo",
-  "colors": null
-});
+
 
 
   const handleSubmit = e => {
     e.preventDefault();
-   
    props.scroll();
+   const func = () => setValues({...values, uri: "https://pixabay.com/api/?key="+API_KEY+"&q="+encodeURIComponent(values.query)+"&image_type="+values.imageType+"&colors="+values.colors});
+   func();
+  
 }
 
 
@@ -56,17 +53,17 @@ return (
                     onKeyDown={e => /[+-.,]$/.test(e.key) && e.preventDefault()} onChange={handleChange} /> <br/><br/>
 
             <label>Color:  <select name="colors" value={values.colors} onChange={handleChange}>
-            <option value="All">All</option>
-            <option value="Red">Red</option>
-            <option value="Green">Green</option>
-            <option value="Blue">Blue</option>
+            <option value="">All</option>
+            <option value="red">Red</option>
+            <option value="green">Green</option>
+            <option value="blue">Blue</option>
           </select> </label> <br />
 
-          <br /> <label> <input name="image_type" value="Photo" type="radio" checked={values.image_type === "Photo" } onChange={handleChange} /> Photo </label>
-          <br /> <label> <input name="image_type" value="Illustration" type="radio" checked={values.image_type === "Illustration" } onChange={handleChange} /> Illustration </label>
-          <br /> <label> <input name="image_type" value="Vector" type="radio" checked={values.image_type === "Vector" } onChange={handleChange} /> Vector </label>
+          <br /> <label> <input name="imageType" value="photo" type="radio" checked={values.imageType === "photo" } onChange={handleChange} /> Photo </label>
+          <br /> <label> <input name="imageType" value="illustration" type="radio" checked={values.imageType === "illustration" } onChange={handleChange} /> Illustration </label>
+          <br /> <label> <input name="imageType" value="vector" type="radio" checked={values.imageType === "vector" } onChange={handleChange} /> Vector </label>
           <br />
-            <button className="btn btn-primary" type="submit">Search</button>
+            <button className="btn btn-primary" type="submit" onClick={values.func}>Search</button>
           </form>
          
         </div>
