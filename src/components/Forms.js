@@ -11,9 +11,9 @@ const [state, setState] = useState({ x: 12 });
   const handleSubmit = e => {
     e.preventDefault();
    props.scroll();
-   const func = () => setValues({...values, uri: "https://pixabay.com/api/?key="+API_KEY+"&q="+encodeURIComponent(values.query)+"&image_type="+values.imageType+"&colors="+values.colors});
+   const func = () => setValues({...values, uri: "https://pixabay.com/api/?key="+API_KEY+"&q="+encodeURIComponent(values.query)+"&image_type="+values.imageType+"&colors="+values.colors , quantity: state.x});
    func();
-   setValues( {...values, quantity: state.x  });
+  
     
 }
 
@@ -32,10 +32,11 @@ function handleChange(e) {
 
 return (
         
-        <div className="row d-flex justify-content-center">
-
+        <div /* style={{height: "100vh"}} */ className="row d-flex justify-content-center">
+       
         <form className="col-12 col-sm-4" onSubmit={handleSubmit}>
-         <input className="form-control form-inline  text-center rounded-4 " name="query" value="" type="text" placeholder="search..." onChange={handleChange} /> <br/><br/> 
+        
+         <input className="form-control form-inline  text-center rounded-4 " name="query" value={props.query} type="text" placeholder="search..." onChange={handleChange} /> <br/><br/> 
             <div className=""  >
             <p className="">results: {state.x}</p>
          <Slider axis="x"  name="quantity"
