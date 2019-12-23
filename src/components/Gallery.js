@@ -1,5 +1,5 @@
 import React, {useState,useEffect,useContext} from 'react'
-
+import { Spinner } from 'reactstrap';
 import "./PixImage.css"
 import Image from "./Image"
 import { GalleryContext } from './GalleryContext';
@@ -34,17 +34,17 @@ export default function Gallery(props) {
           setIsLoading(false);
         };
         fetchData();
-      }, [URL]);
+      }, [URL,values.quantity]);
      
      //console.log(data.hits)
     return (
         <div className="row">
             
             {isError && <div>Something went wrong ...</div>}
-            {isLoading ? (<div>Loading ...</div>) : ( <>
+            {isLoading ? (<div className="m-auto fa-5x fa-pulse"><Spinner type="grow" color="success" /></div>) : ( <>
       {data.hits.slice(0,values.quantity).map(img => (
         
-       <Image Large={img.largeImageURL} Author={img.user} Downloads={img.downloads}/>
+       <Image key={img.largeImageURL} Large={img.largeImageURL} Author={img.user} Downloads={img.downloads}/>
        
       ))}
       </>
