@@ -38,9 +38,9 @@ export default function Gallery(props) {
      
      //console.log(data.hits)
     return (
-        <div className="row">
-            
-            {isError && <div>Something went wrong ...</div>}
+        <div className="row p-2">
+            {data.totalHits === 0 && <div className="col text-white text-center lead" > no results...</div>}
+            {isError && <div className="col text-white text-center lead">Something went wrong ...</div>}
             {isLoading ? (<div className="m-auto fa-5x fa-pulse"><Spinner type="grow" color="success" /></div>) : ( <>
       {data.hits.slice(0,values.quantity).map(img => (
         
