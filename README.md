@@ -14,7 +14,7 @@ and then the App displays the results (Images, Author, number of downloads) (Dow
 
 used: useState, useEffect, useRef, useContext
 
-custom react hook: own form validation (no need to use 3rd party packages, like formik) 
+custom react hook: own form (no need to use 3rd party packages, like formik) 
 
 #### Style:
 Bootstrap 4 and own custom css 
