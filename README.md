@@ -12,6 +12,7 @@ users can search images and choose image colors, image type(photo/vector/illustr
 ### React Hooks:
 
 used: useState, useEffect, useRef, useContext
+
 custom react hook: own forms and validation (no need to use 3rd party packages, like formik) 
 
 #### Style:
@@ -19,7 +20,9 @@ Bootstrap 4 and styled-components, custom css
 
 ##### Additional packages:
 [Axios](https://github.com/axios/axios): Promise based HTTP client
+
 [Grommet](https://v2.grommet.io/): powerful react component library
+
 [reactstrap](https://reactstrap.github.io/): react bootstrap 4 components
 
 dot env: (if you clone this repo make a .env with REACT_APP_API_KEY=*your pixabay api key*)
