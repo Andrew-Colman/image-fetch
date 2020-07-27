@@ -1,6 +1,5 @@
 import React, {useState,useEffect,useContext} from 'react'
 import { Spinner } from 'reactstrap';
-import "./PixImage.css"
 import Image from "./Image"
 import { GalleryContext } from './GalleryContext';
 const axios = require('axios');
@@ -20,6 +19,7 @@ export default function Gallery(props) {
     //const URL = "https://pixabay.com/api/?key="+API_KEY+"&q="+encodeURIComponent(props.query)+"&image_type"+props.quantity+"editors_choice=true&colors="+props.colors;
 
     useEffect(() => {
+      
         const fetchData = async () => {
             setIsError(false);
             setIsLoading(true);
@@ -32,11 +32,15 @@ export default function Gallery(props) {
             setIsError(true);
         }
           setIsLoading(false);
+          
         };
         fetchData();
+        
       }, [URL,values.quantity]);
      
-     //console.log(data.hits)
+     
+      console.log(data.totalHits)
+      console.log(URL)
     return (
         <div className="row p-2">
             {data.totalHits === 0 && <div className="col text-white text-center lead" > no results...</div>}
