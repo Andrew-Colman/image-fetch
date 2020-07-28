@@ -1,8 +1,8 @@
 {
-  "name": "fetch",
-  "version": "0.1.0",
+  "name": "image-fetch",
+  "version": "0.2.0",
   "private": true,
-  "homepage": "https://spectralapps.github.io/fetch/",
+  "homepage": "https://spectralapps.github.io/image-fetch/",
   "dependencies": {
     "axios": "^0.19.0",
     "dotenv": "^8.2.0",
