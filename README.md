@@ -11,14 +11,17 @@ users can search images and choose image colors, image type(photo/vector/illustr
 
 ### React Hooks:
 
-used: useState, useEffect, useRef, useContext
+useState, useEffect, useRef, useContext
+
+Suspense: display useful loading states
+
+React lazy:  load different parts of the application only when they're needed (code-splitting)
 
 custom react hook: own forms and validation (no need to use 3rd party packages, like formik) 
 
-#### Style:
-Bootstrap 4 and styled-components, custom css 
+#### Additional packages:
+[React-Router](https://reactrouter.com/): allows us to build a single-page web application with navigation without the page refreshing as the user navigates
 
-##### Additional packages:
 [Axios](https://github.com/axios/axios): Promise based HTTP client
 
 [Grommet](https://v2.grommet.io/): powerful react component library
@@ -27,6 +30,10 @@ Bootstrap 4 and styled-components, custom css
 
 dot env: (if you clone this repo make a .env with REACT_APP_API_KEY=*your pixabay api key*)
 (https://pixabay.com/api/docs/)
+
+
+##### Style:
+Bootstrap 4 and styled-components, custom css 
 
 
 > **[Pixabay](https://pixabay.com/) is a free public domain image repository (CC0)**
