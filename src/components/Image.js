@@ -20,21 +20,24 @@ const Img = styled.img`
   }
 `;
 
-export default function Image(props) {
+export default function Image({ Author, Downloads, Large }) {
   return (
     <div className="col-6 col-sm-3 p-3 text-center">
       <div className="card hover">
-        <Img className="m-3 img-fluid align-self-center PixImage " src={props.Large} alt="" />
+        <Img className="m-3 img-fluid align-self-center PixImage " src={Large} alt="" />
         <div className="card-footer">
           <small className="">
-            Author: <strong>{props.Author}</strong>
+            Author:
+            <strong>{Author}</strong>
           </small>
           <p className="fa-sm font-weight-light">
-            Downloads: {props.Downloads}{' '}
+            Downloads:
+            {Downloads}{' '}
             <button
+              type="button"
               className="btn btn-link  m-1"
-              href={props.Large}
-              onClick={() => window.open(props.Large, '_blank')}
+              href={Large}
+              onClick={() => window.open(Large, '_blank')}
             >
               <i className="fas fa-file-download" />
             </button>

@@ -5,7 +5,7 @@
     "allowImportExportEverywhere": false,
     "codeFrame": false
   },
-  "extends": ["airbnb", "prettier"],
+  "extends": ["airbnb", "airbnb/hooks", "prettier", "eslint:recommended"],
   "env": {
     "browser": true,
     "jest": true
@@ -14,7 +14,10 @@
     "max-len": ["error", { "code": 100 }],
     "prefer-promise-reject-errors": ["off"],
     "react/jsx-filename-extension": ["off"],
-    "react/prop-types": ["warn"],
-    "no-return-assign": ["off"]
+    "react/prop-types": ["off"],
+    "no-return-assign": ["off"],
+    "react/destructuring-assignment": ["off", "always", { "ignoreClassFields": true }],
+    "react/jsx-one-expression-per-line": ["off", { "allow": "single-child" }],
+    "no-console": "off"
   }
 }

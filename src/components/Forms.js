@@ -1,6 +1,8 @@
+/* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useState, useContext } from 'react';
-import { GalleryContext } from './GalleryContext';
 import Slider from 'react-input-slider';
+import { GalleryContext } from './GalleryContext';
+
 const API_KEY = process.env.REACT_APP_API_KEY;
 
 export default function Forms(props) {
@@ -13,15 +15,9 @@ export default function Forms(props) {
     const func = () =>
       setValues({
         ...values,
-        uri:
-          'https://pixabay.com/api/?key=' +
-          API_KEY +
-          '&q=' +
-          encodeURIComponent(values.query) +
-          '&image_type=' +
-          values.imageType +
-          '&colors=' +
-          values.colors,
+        uri: `https://pixabay.com/api/?key=${API_KEY}&q=${encodeURIComponent(
+          values.query
+        )}&image_type=${values.imageType}&colors=${values.colors}`,
         quantity: state.x,
       });
     func();
@@ -40,7 +36,7 @@ export default function Forms(props) {
   }
 
   return (
-    <div /* style={{height: "100vh"}} */ className="row d-flex justify-content-center">
+    <div className="row d-flex justify-content-center">
       <form className="col-12 col-sm-4" onSubmit={handleSubmit}>
         <input
           className="form-control form-inline  text-center rounded-4 "
@@ -61,14 +57,19 @@ export default function Forms(props) {
             xmin={2}
             xmax={20}
             x={state.x}
-            onChange={({ x }) => setState({ x: x })}
+            onChange={({ x }) => setState({ x })}
           />
         </div>
         <br />
         <br />
         <label>
           Color:{' '}
-          <select class="custom-select" name="colors" value={values.colors} onChange={handleChange}>
+          <select
+            className="custom-select"
+            name="colors"
+            value={values.colors}
+            onChange={handleChange}
+          >
             <option value="">All</option>
             <option value="red">Red</option>
             <option value="green">Green</option>
@@ -87,7 +88,7 @@ export default function Forms(props) {
             checked={values.imageType === 'photo'}
             onChange={handleChange}
           />
-          <label className="custom-control-label" for="customRadio1">
+          <label className="custom-control-label" htmlFor="customRadio1">
             {' '}
             Photo{' '}
           </label>{' '}
@@ -103,7 +104,7 @@ export default function Forms(props) {
             checked={values.imageType === 'illustration'}
             onChange={handleChange}
           />
-          <label className="custom-control-label" for="customRadio2">
+          <label className="custom-control-label" htmlFor="customRadio2">
             {' '}
             Illustration{' '}
           </label>
@@ -119,7 +120,7 @@ export default function Forms(props) {
             checked={values.imageType === 'vector'}
             onChange={handleChange}
           />
-          <label className="custom-control-label" for="customRadio3">
+          <label className="custom-control-label" htmlFor="customRadio3">
             {' '}
             Vector{' '}
           </label>
