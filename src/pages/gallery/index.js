@@ -1,5 +1,10 @@
 import React from 'react';
+import Server from '../../server';
 
 export default function index() {
-  return <div>wip</div>;
+  return (
+    <div>
+      <Server />
+    </div>
+  );
 }

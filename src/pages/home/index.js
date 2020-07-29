@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import Gallery from '../../components/Gallery';
+import GalleryGrid from '../../components/GalleryGrid';
 import Forms from '../../components/Forms';
 import Footer from '../../layout/Footer';
 import Header from '../../layout/Header';
@@ -23,7 +23,7 @@ export default function Index() {
       </Search>
       <div className="row">
         <div ref={myRef} id="gallery" className="col bg-dark">
-          <Gallery />
+          <GalleryGrid />
         </div>
       </div>
       <Footer />

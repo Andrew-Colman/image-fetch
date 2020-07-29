@@ -5,7 +5,7 @@ import { GalleryContext } from './GalleryContext';
 
 const axios = require('axios');
 
-export default function Gallery() {
+export default function GalleryGrid() {
   // Api data
   const [data, setData] = useState({ hits: [] });
   // Context values

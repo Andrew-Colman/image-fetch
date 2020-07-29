@@ -41,6 +41,15 @@ export default function Image({ Author, Downloads, Large }) {
             >
               <i className="fas fa-file-download" />
             </button>
+            <br />
+            <button
+              type="button"
+              className="btn btn-success  m-1"
+              href={Large}
+              onClick={() => console.log(`saved ${Large}`)}
+            >
+              <i className="fas fa-save" />
+            </button>
           </p>
         </div>
       </div>
