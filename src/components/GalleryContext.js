@@ -1,5 +1,5 @@
 import React, { useState, createContext } from 'react';
-import { db } from '../../server';
+import { db } from '../server';
 
 const API_KEY = process.env.REACT_APP_API_KEY;
 
@@ -13,7 +13,7 @@ export const GalleryProvider = ({ children }) => {
     colors: '',
     per_page: 20,
     uri: `https://pixabay.com/api/?key=${API_KEY}&q=${encodeURIComponent('query')}`,
-    "database": db.posts
+    database: db.posts,
   });
 
   return <GalleryContext.Provider value={[values, setValues]}>{children}</GalleryContext.Provider>;
