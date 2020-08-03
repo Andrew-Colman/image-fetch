@@ -1,10 +1,10 @@
 import React from 'react';
-import Server from '../../server';
+import MyGallery from './components/MyGallery';
 
 export default function index() {
   return (
     <div>
-      <Server />
+      <MyGallery />
     </div>
   );
 }

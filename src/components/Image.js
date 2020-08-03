@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import { saveImage } from '../server';
+
 const StyledImg = styled.img`
   max-width: 300px !important;
   height: 200px !important;
@@ -45,7 +47,7 @@ export default function Image({ Author, Downloads, Large }) {
               type="button"
               className="btn btn-success  m-1"
               href={Large}
-              onClick={() => console.log(`saved ${Large}`)}
+              onClick={() => saveImage(`${Large}`)}
             >
               <i className="fas fa-save" />
             </button>

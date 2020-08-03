@@ -14,13 +14,13 @@ export default function NavbarLay() {
           </NavbarBrand>
 
           <Nav className="">
-            <Link exact to="/">
+            <Link to="/">
               <Button active={location.pathname === '/'} className="mx-1">
                 Search
               </Button>
             </Link>
 
-            <Link exact to="/featured">
+            <Link to="/featured">
               <Button active={location.pathname === '/featured'} className="mx-1">
                 Featured
               </Button>
