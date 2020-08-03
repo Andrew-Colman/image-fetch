@@ -1,30 +1,38 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Img = styled.img`
+const StyledImg = styled.img`
   max-width: 300px !important;
   height: 200px !important;
 
-  .hover {
-    transition: 0.2s ease;
+  @media screen and (max-width: 500px) {
+    max-width: 200px !important;
+    height: 100px !important;
   }
-  .hover:hover {
+  &:hover {
+    cursor: pointer;
+  }
+`;
+
+const StyledCard = styled.div`
+  transition: 0.2s ease;
+
+  &:hover {
     background-color: #f0f0f0;
     transform: scale(1.05);
-  }
-  @media screen and (max-width: 500px) {
-    .PixImage {
-      max-width: 200px !important;
-      height: 100px !important;
-    }
   }
 `;
 
 export default function Image({ Author, Downloads, Large }) {
   return (
     <div className="col-6 col-sm-3 p-3 text-center">
-      <div className="card hover">
-        <Img className="m-3 img-fluid align-self-center PixImage " src={Large} alt="" />
+      <StyledCard className="card hover">
+        <StyledImg
+          className="m-3 img-fluid align-self-center  "
+          src={Large}
+          alt=""
+          onClick={() => window.open(Large, '_blank')}
+        />
         <div className="card-footer">
           <small className="">
             Author:
@@ -35,15 +43,6 @@ export default function Image({ Author, Downloads, Large }) {
             {Downloads}{' '}
             <button
               type="button"
-              className="btn btn-link  m-1"
-              href={Large}
-              onClick={() => window.open(Large, '_blank')}
-            >
-              <i className="fas fa-file-download" />
-            </button>
-            <br />
-            <button
-              type="button"
               className="btn btn-success  m-1"
               href={Large}
               onClick={() => console.log(`saved ${Large}`)}
@@ -52,7 +51,7 @@ export default function Image({ Author, Downloads, Large }) {
             </button>
           </p>
         </div>
-      </div>
+      </StyledCard>
     </div>
   );
 }

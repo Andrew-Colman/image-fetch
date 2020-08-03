@@ -6,7 +6,11 @@ export default function Footer() {
       <div className="col text-center text-white mb-2">
         <hr />
         <footer>
-          <small className="text-primary"> &copy; Spectral Apps </small>
+          <small className="text-primary">
+            {' '}
+            &copy; Spectral Apps{' '}
+            <i href="https://github.com/spectralapps" className="fab fa-github" />
+          </small>
         </footer>
       </div>
     </div>
