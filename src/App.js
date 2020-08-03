@@ -6,7 +6,7 @@ import Navbar from './components/NavBar';
 
 const Home = lazy(() => import('./pages/home'));
 const GalleryPage = lazy(() => import('./pages/gallery'));
-
+const FeaturedPage = lazy(() => import('./pages/featured'));
 require('dotenv').config();
 
 function App() {
@@ -23,6 +23,9 @@ function App() {
               </Route>
               <Route exact path="/gallery">
                 <GalleryPage />
+              </Route>
+              <Route exact path="/featured">
+                <FeaturedPage />
               </Route>
             </GalleryProvider>
           </Switch>
