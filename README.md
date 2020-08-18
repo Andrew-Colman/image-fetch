@@ -35,3 +35,5 @@ Bootstrap 4 and styled-components, custom css
 
 
 > **[Pixabay](https://pixabay.com/) is a free public domain image repository (CC0)**
+
+Image cropping: https://github.com/spectralapps/image-crop
