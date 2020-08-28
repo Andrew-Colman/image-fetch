@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { saveImage } from '../server';
+import { cacheImage } from '../../../server';
 
 const StyledImg = styled.img`
   max-width: 300px !important;
@@ -45,11 +45,11 @@ export default function Image({ Author, Downloads, Large }) {
             {Downloads}{' '}
             <button
               type="button"
-              className="btn btn-success  m-1"
+              className="btn btn-light m-1"
               href={Large}
-              onClick={() => saveImage(`${Large}`)}
+              onClick={() => cacheImage(`${Large}`)}
             >
-              <i className="fas fa-save" />
+              <i className="fas fa-star fa-sm text-secondary " />
             </button>
           </p>
         </div>

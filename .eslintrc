@@ -18,6 +18,10 @@
     "no-return-assign": ["off"],
     "react/destructuring-assignment": ["off", "always", { "ignoreClassFields": true }],
     "react/jsx-one-expression-per-line": ["off", { "allow": "single-child" }],
-    "no-console": "off"
+    "no-console": "off",
+    "max-lines": "off",
+    "no-unused-vars": "off",
+    "jsx-a11y/no-noninteractive-element-interactions": "off",
+    "jsx-a11y/click-events-have-key-events": "off"
   }
 }

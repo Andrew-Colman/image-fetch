@@ -1,14 +1,34 @@
+/* eslint-disable max-len */
 import React, { useState } from 'react';
 import { Collapse, Button, Card, CardBody } from 'reactstrap';
+import styled from 'styled-components';
+import img from '../../../assets/img.jpeg';
+
+const StyledHeader = styled.div`
+  height: calc(100vh - 58px);
+  background-image: url(${img});
+  background-size: cover;
+  width: 100%;
+  margin: auto;
+`;
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
+
+  function goTo() {
+    window.scrollBy({
+      top: window.innerHeight - 58,
+      left: 0,
+      behavior: 'smooth',
+    });
+  }
+
   return (
     <>
-      <div className="row">
-        <div className="col-12 bg-dark text-center text-white">
-          <div className="jumbotron bg-dark">
+      <StyledHeader>
+        <div className="container text-center text-white">
+          <div style={{ backgroundColor: 'transparent' }} className="jumbotron px-4">
             <h1 className="display-4">Welcome</h1>
             <p className="lead">Spectral Apps fetch project</p>
 
@@ -27,9 +47,13 @@ export default function Header() {
             </Collapse>
           </div>
 
-          <hr />
+          <Button onClick={goTo} color="primary">
+            <i className="fas fa-chevron-down animate__animated animate__delay-1s animate__bounce " />
+          </Button>
         </div>
-      </div>
+      </StyledHeader>
+
+      <hr />
     </>
   );
 }

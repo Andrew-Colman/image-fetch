@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { Spinner, Row } from 'reactstrap';
 import Image from './Image';
-import { GalleryContext } from './GalleryContext';
+import { GalleryContext } from '../../../components/GalleryContext';
 
 const axios = require('axios');
 
@@ -31,8 +31,8 @@ export default function GalleryGrid() {
     fetchData();
   }, [URL, values.quantity]);
 
-  console.log(data.totalHits);
-  console.log(URL);
+  /*   console.log(data.totalHits);
+  console.log(URL); */
   return (
     <>
       <Row className="p-2">

@@ -1,9 +1,9 @@
 import React, { useRef } from 'react';
-import GalleryGrid from '../../components/GalleryGrid';
-import Forms from '../../components/Forms';
+import GalleryGrid from './components/GalleryGrid';
 import Footer from '../../layout/Footer';
-import Header from '../../layout/Header';
-import Search from '../../layout/Search';
+import Header from './components/Header';
+import Forms from './components/Forms';
+import Search from './components/Search';
 
 const scrollToRef = (ref) =>
   window.scrollTo({
@@ -18,15 +18,17 @@ export default function Index() {
   return (
     <>
       <Header />
-      <Search>
-        <Forms scroll={executeScroll} />
-      </Search>
-      <div className="row">
-        <div ref={myRef} id="gallery" className="col bg-dark">
-          <GalleryGrid />
+      <div className="container-fluid">
+        <Search>
+          <Forms scroll={executeScroll} />
+        </Search>
+        <div className="row">
+          <div ref={myRef} id="gallery" className="col bg-dark">
+            <GalleryGrid />
+          </div>
         </div>
+        <Footer />
       </div>
-      <Footer />
     </>
   );
 }

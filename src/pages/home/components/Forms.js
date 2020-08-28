@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useState, useContext } from 'react';
 import Slider from 'react-input-slider';
-import { GalleryContext } from './GalleryContext';
+import { GalleryContext } from '../../../components/GalleryContext';
 
 const API_KEY = process.env.REACT_APP_API_KEY;
 
@@ -11,7 +11,6 @@ export default function Forms(props) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    props.scroll();
     const func = () =>
       setValues({
         ...values,
@@ -21,6 +20,7 @@ export default function Forms(props) {
         quantity: state.x,
       });
     func();
+    props.scroll();
   };
 
   function handleChange(e) {

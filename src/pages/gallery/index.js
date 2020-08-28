@@ -3,7 +3,7 @@ import MyGallery from './components/MyGallery';
 
 export default function index() {
   return (
-    <div>
+    <div className="container-fluid">
       <MyGallery />
     </div>
   );

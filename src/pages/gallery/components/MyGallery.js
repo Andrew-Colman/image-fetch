@@ -8,8 +8,8 @@ export default function MyGallery() {
     <div>
       <Row>
         {state.posts.map((x) => (
-          <Col className="sm-6 p-2 m-2">
-            <Image key={x.id} Large={x.title} />
+          <Col key={x.id} className=" p-2 m-2 ">
+            <Image Large={x.title} />
           </Col>
         ))}
       </Row>
