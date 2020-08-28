@@ -1,9 +1,9 @@
 import React from 'react';
 import { Col, Row } from 'reactstrap';
-import { state } from '../../../server';
 import Image from './Image';
 
 export default function MyGallery() {
+  const state = [];
   return (
     <div>
       <Row>

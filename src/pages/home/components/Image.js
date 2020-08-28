@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { cacheImage } from '../../../server';
+import FavoriteButton from './FavoriteButton';
 
 const StyledImg = styled.img`
   max-width: 300px !important;
@@ -42,15 +42,7 @@ export default function Image({ Author, Downloads, Large }) {
           </small>
           <p className="fa-sm font-weight-light">
             Downloads:
-            {Downloads}{' '}
-            <button
-              type="button"
-              className="btn btn-light m-1"
-              href={Large}
-              onClick={() => cacheImage(`${Large}`)}
-            >
-              <i className="fas fa-star fa-sm text-secondary " />
-            </button>
+            {Downloads} <FavoriteButton Large={Large} />
           </p>
         </div>
       </StyledCard>
