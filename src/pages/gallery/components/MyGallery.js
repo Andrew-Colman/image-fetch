@@ -2,14 +2,15 @@ import React from 'react';
 import { Col, Row } from 'reactstrap';
 import Image from './Image';
 
-export default function MyGallery() {
-  const state = [];
+export default function MyGallery(props) {
+  const state = Object.values({ ...localStorage });
+
   return (
     <div>
       <Row>
-        {state.posts.map((x) => (
-          <Col key={x.id} className=" p-2 m-2 ">
-            <Image Large={x.title} />
+        {state.map((x) => (
+          <Col key={x} className=" p-2 m-2 ">
+            <Image Large={x.replace(/"/g, '')} />
           </Col>
         ))}
       </Row>

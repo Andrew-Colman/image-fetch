@@ -24,6 +24,7 @@ export default function GalleryGrid() {
           <>
             {data.hits.slice(0, values.quantity).map((img) => (
               <Image
+                Id={img.id}
                 key={img.largeImageURL}
                 Large={img.largeImageURL}
                 Author={img.user}

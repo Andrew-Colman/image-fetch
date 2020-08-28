@@ -25,7 +25,7 @@ const StyledCard = styled.div`
   }
 `;
 
-export default function Image({ Author, Downloads, Large }) {
+export default function Image({ Author, Downloads, Large, Id }) {
   return (
     <div className="col-6 col-sm-3 p-3 text-center">
       <StyledCard className="card hover">
@@ -42,7 +42,7 @@ export default function Image({ Author, Downloads, Large }) {
           </small>
           <p className="fa-sm font-weight-light">
             Downloads:
-            {Downloads} <FavoriteButton Large={Large} />
+            {Downloads} <FavoriteButton Large={Large} Id={Id} />
           </p>
         </div>
       </StyledCard>
