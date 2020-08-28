@@ -1,35 +1,11 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React from 'react';
 import { Spinner, Row } from 'reactstrap';
 import Image from './Image';
-import { GalleryContext } from '../../../components/GalleryContext';
-
-const axios = require('axios');
+import { useQuery } from '../../../components/useQuery';
 
 export default function GalleryGrid() {
   // Api data
-  const [data, setData] = useState({ hits: [] });
-  // Context values
-  const [values] = useContext(GalleryContext);
-  // Loading / error states
-  const [isLoading, setIsLoading] = useState(false);
-  const [isError, setIsError] = useState(false);
-
-  const URL = values.uri;
-
-  useEffect(() => {
-    const fetchData = async () => {
-      setIsError(false);
-      setIsLoading(true);
-      try {
-        const result = await axios(URL);
-        setData(result.data);
-      } catch (error) {
-        setIsError(true);
-      }
-      setIsLoading(false);
-    };
-    fetchData();
-  }, [URL, values.quantity]);
+  const { values, data, isLoading, isError } = useQuery('');
 
   /*   console.log(data.totalHits);
   console.log(URL); */
