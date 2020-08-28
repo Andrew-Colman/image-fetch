@@ -41,7 +41,7 @@ export default function Header() {
             </Collapse>
           </div>
 
-          <Button onClick={() => goTo(-58)} color="primary">
+          <Button onClick={() => goTo(58)} color="primary">
             <i className="fas fa-chevron-down animate__animated animate__delay-1s animate__bounce " />
           </Button>
         </div>

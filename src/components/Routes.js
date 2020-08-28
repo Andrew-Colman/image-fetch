@@ -1,5 +1,7 @@
 import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import Loading from './Loading';
 import Navbar from '../layout/NavBar';
 import { GalleryProvider } from './GalleryContext';
@@ -15,6 +17,7 @@ export default function Routes() {
         <GalleryProvider>
           <Suspense fallback={<Loading />}>
             <Navbar />
+            <ToastContainer />
             <Switch>
               <Route exact path="/">
                 <Home />
