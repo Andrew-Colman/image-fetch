@@ -30,21 +30,23 @@ export default function NavbarLay() {
 
   return (
     <Navbar className="sticky-top text-right" color="dark">
-      <NavbarBrand href="#top">
-        <img
-          className={animate}
-          ref={logoRef}
-          src={Logo}
-          alt="Logo"
-          style={{ width: '40px' }}
-          onClick={() => {
-            doAnimation();
-          }}
-        />
+      <NavbarBrand>
+        <Link to="/?to=top">
+          <img
+            className={animate}
+            ref={logoRef}
+            src={Logo}
+            alt="Logo"
+            style={{ width: '40px' }}
+            onClick={() => {
+              doAnimation();
+            }}
+          />
+        </Link>
       </NavbarBrand>
       <Nav className="d-none d-md-flex nav-item">
         <NavItem>
-          <Link to="/">
+          <Link to="/?to=search">
             <Button active={location.pathname === '/'} className="mx-1">
               Search
             </Button>

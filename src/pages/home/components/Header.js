@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { Collapse, Button, Card, CardBody } from 'reactstrap';
 import styled from 'styled-components';
 import img from '../../../assets/img.jpeg';
+import useScroll from '../../../components/useScroll';
 
 const StyledHeader = styled.div`
   height: calc(100vh - 58px);
@@ -14,15 +15,8 @@ const StyledHeader = styled.div`
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const { goTo } = useScroll();
   const toggle = () => setIsOpen(!isOpen);
-
-  function goTo() {
-    window.scrollBy({
-      top: window.innerHeight - 58,
-      left: 0,
-      behavior: 'smooth',
-    });
-  }
 
   return (
     <>
@@ -47,7 +41,7 @@ export default function Header() {
             </Collapse>
           </div>
 
-          <Button onClick={goTo} color="primary">
+          <Button onClick={() => goTo(-58)} color="primary">
             <i className="fas fa-chevron-down animate__animated animate__delay-1s animate__bounce " />
           </Button>
         </div>
