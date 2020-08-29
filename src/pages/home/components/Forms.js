@@ -3,23 +3,18 @@ import React, { useState, useContext } from 'react';
 import Slider from 'react-input-slider';
 import { GalleryContext } from '../../../components/GalleryContext';
 
-const API_KEY = process.env.REACT_APP_API_KEY;
-
 export default function Forms(props) {
-  const [values, setValues] = useContext(GalleryContext);
+  const [values, setValues, updateUrl] = useContext(GalleryContext);
   const [state, setState] = useState({ x: 12 });
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const func = () =>
-      setValues({
-        ...values,
-        uri: `https://pixabay.com/api/?key=${API_KEY}&q=${encodeURIComponent(
-          values.query
-        )}&image_type=${values.imageType}&colors=${values.colors}`,
-        quantity: state.x,
-      });
-    func();
+    updateUrl(
+      `&q=${encodeURIComponent(values.query)}&image_type=${values.imageType}&colors=${
+        values.colors
+      }`,
+      state.x
+    );
     props.scroll();
   };
 

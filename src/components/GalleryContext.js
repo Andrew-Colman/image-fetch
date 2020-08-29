@@ -1,6 +1,7 @@
 import React, { useState, createContext } from 'react';
 
-const API_KEY = process.env.REACT_APP_API_KEY;
+const API_KEY =
+  process.env.NODE_ENV !== 'production' ? process.env.REACT_APP_API_KEY : process.env.API_KEY;
 
 export const GalleryContext = createContext();
 
@@ -11,8 +12,21 @@ export const GalleryProvider = ({ children }) => {
     imageType: 'photo',
     colors: '',
     per_page: 20,
-    uri: `https://pixabay.com/api/?key=${API_KEY}&q=${encodeURIComponent('query')}`,
+    params: `&q=${encodeURIComponent('query')}&image_type=${'imageType'}&colors=$'{colors'}`,
+    uri: `https://pixabay.com/api/?key=${API_KEY}${'params'}`,
   });
 
-  return <GalleryContext.Provider value={[values, setValues]}>{children}</GalleryContext.Provider>;
+  function updateUrl(params, x) {
+    setValues({
+      ...values,
+      uri: `https://pixabay.com/api/?key=${API_KEY}${params}`,
+      quantity: x,
+    });
+  }
+
+  return (
+    <GalleryContext.Provider value={[values, setValues, updateUrl]}>
+      {children}
+    </GalleryContext.Provider>
+  );
 };

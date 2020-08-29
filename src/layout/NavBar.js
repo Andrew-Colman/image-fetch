@@ -30,7 +30,7 @@ export default function NavbarLay() {
 
   return (
     <Navbar className="sticky-top text-right" color="dark">
-      <NavbarBrand>
+      <NavbarBrand tag="div">
         <Link to="/?to=top">
           <img
             className={animate}
