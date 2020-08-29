@@ -8,8 +8,10 @@
   "extends": ["airbnb", "airbnb/hooks", "prettier", "eslint:recommended"],
   "env": {
     "browser": true,
+    "es2020": true,
     "jest": true
   },
+  "ignorePatterns": ["build/*"],
   "rules": {
     "max-len": ["error", { "code": 100 }],
     "prefer-promise-reject-errors": ["off"],
