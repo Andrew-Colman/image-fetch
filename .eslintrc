@@ -13,6 +13,7 @@
   },
   "ignorePatterns": ["build/*"],
   "rules": {
+    "import/no-cycle": "off",
     "max-len": ["error", { "code": 100 }],
     "prefer-promise-reject-errors": ["off"],
     "react/jsx-filename-extension": ["off"],
