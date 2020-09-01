@@ -9,6 +9,7 @@ import { GalleryProvider } from './GalleryContext';
 const Home = lazy(() => import('../pages/home'));
 const GalleryPage = lazy(() => import('../pages/gallery'));
 const FeaturedPage = lazy(() => import('../pages/featured'));
+const NotFoundPage = lazy(() => import('../pages/not-found'));
 
 export default function Routes() {
   return (
@@ -27,6 +28,9 @@ export default function Routes() {
               </Route>
               <Route exact path="/featured">
                 <FeaturedPage />
+              </Route>
+              <Route path="*">
+                <NotFoundPage />
               </Route>
             </Switch>
           </Suspense>
