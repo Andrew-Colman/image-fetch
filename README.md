@@ -2,31 +2,54 @@
 
 This React App fetch pixabay api information then the app displays the results (Images with Author's name and number of downloads)
 
-*https://spectralapps.github.io/image-fetch/*
+_https://image-fetch.vercel.app/_
 
+> Users can search images and choose image colors
 
-users can search images and choose image colors, image type(photo/vector/illustration), limit the results (max 20)
-(Download any Image)
+> Image type (Photo/Vector/Illustration), limit the results (max 20)
 
+> Download any Image or save them to local /gallery
 
-### React Hooks:
+### React Features:
 
-used: useState, useEffect, useRef, useContext
+```js
+Hooks: useState, useEffect, useRef, useContext
 
-custom react hook: own forms and validation (no need to use 3rd party packages, like formik) 
+-> Context Api
+
+-> React.lazy
+
+-> Suspense
+
+Custom react hooks: useQuery, useParams, useScroll, useLocalStorage
+```
 
 #### Style:
-Bootstrap 4 and styled-components, custom css 
+
+```js
+🔷 Bootstrap 4
+
+💅 Styled-components (custom css)
+
+📱  Responsive Web design
+```
 
 ##### Additional packages:
+
 [Axios](https://github.com/axios/axios): Promise based HTTP client
 
-[Grommet](https://v2.grommet.io/): powerful react component library
+[Reactstrap](https://reactstrap.github.io/): Bootstrap 4 React components
 
-[reactstrap](https://reactstrap.github.io/): react bootstrap 4 components
+[React-router](https://reactrouter.com/): dynamic routes
 
-dot env: (if you clone this repo make a .env with REACT_APP_API_KEY=*your pixabay api key*)
-(https://pixabay.com/api/docs/)
+[Dot env](https://www.npmjs.com/package/dotenv): if you clone this repo make a .env file with
 
+```js
+REACT_APP_API_KEY='your pixabay api key' // (dev)
+
+API_KEY='your pixabay api key' // (production)
+
+get your key here: https://pixabay.com/api/docs/
+```
 
 > **[Pixabay](https://pixabay.com/) is a free public domain image repository (CC0)**
