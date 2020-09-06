@@ -1,12 +1,11 @@
 {
   "name": "image-fetch",
-  "version": "0.2.5",
+  "version": "0.3.6",
   "private": true,
-  "homepage": "https://spectralapps.github.io/image-fetch/",
+  "homepage": "https://image-fetch.vercel.app/",
   "dependencies": {
     "axios": "^0.19.0",
     "dotenv": "^8.2.0",
-    "gh-pages": "^2.1.1",
     "nanoid": "^3.1.11",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
@@ -20,8 +19,6 @@
     "styled-components": "^5.1.1"
   },
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

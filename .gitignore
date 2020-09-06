@@ -24,3 +24,5 @@ yarn-debug.log*
 yarn-error.log*
 README.md
 start.bat
+
+.vercel
