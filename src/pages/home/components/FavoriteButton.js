@@ -1,48 +1,46 @@
 import React from 'react';
-import { toast } from 'react-toastify';
+import { Button } from 'reactstrap';
 import useLocalStorage from '../../../components/useLocalStorage';
+import useToasts from '../../../components/useToasts';
 
-export default function FavoriteButton({ Large, Id }) {
+export default function FavoriteButton({ Large, Id, Location }) {
   const [toggled, setToggle] = React.useState(false);
-  const [isFavorite, setIsFavorite, removeValue] = useLocalStorage(Id, Large);
+  const [value, setIsFavorite, getKey, removeValue] = useLocalStorage(Id);
 
-  const notify = (msg) =>
-    toast(msg, { type: 'dark', position: 'bottom-center', autoClose: 5000, Transition: 'slide' });
+  const [notify] = useToasts();
 
   const toggleState = () => {
     setToggle(!toggled);
 
-    if (!toggled) {
+    if (toggled === false) {
       setIsFavorite(Large);
+
       notify('Saved to your gallery');
     } else {
       removeValue(Id);
-      notify('Removed from your gallery');
+      notify(`Removed from your gallery`);
     }
   };
 
   React.useEffect(() => {
-    if (isFavorite !== Large) {
-      setToggle(true);
-    }
-  }, [Large, isFavorite]);
+    if (value || Location === 'gallery') setToggle(true);
+  }, [Location, value]);
 
   return (
     <>
-      <button
-        type="button"
-        className="btn m-1 btn-light"
-        href={Large}
+      <Button
+        color="dark"
+        size="sm"
         onClick={() => {
           toggleState();
         }}
       >
         <i
-          className={`fas fa-star fa-sm ${
+          className={`fas fa-star ${
             toggled ? 'text-success animate__animated animate__tada' : 'text-secondary'
           }`}
         />
-      </button>
+      </Button>
     </>
   );
 }

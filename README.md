@@ -53,3 +53,5 @@ get your key here: https://pixabay.com/api/docs/
 ```
 
 > **[Pixabay](https://pixabay.com/) is a free public domain image repository (CC0)**
+
+_Related project: [image-crop](https://github.com/spectralapps/image-crop)_

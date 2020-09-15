@@ -2,12 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 
 const StyledImg = styled.img`
-  max-width: 50vh !important;
-  max-height: 80vh !important;
+  max-width: 33vw !important;
 
   @media screen and (max-width: 500px) {
-    max-width: 30vh !important;
-    max-height: 50vh !important;
+    max-width: 80vw !important;
   }
   &:hover {
     cursor: pointer;
@@ -26,7 +24,7 @@ const StyledCard = styled.div`
 
 export default function Image({ Large }) {
   return (
-    <StyledCard className="card hover mx-auto shadow-sm p-1">
+    <StyledCard className="card mx-auto shadow-sm p-1">
       <StyledImg
         className="m-3 img-fluid align-self-center  "
         src={Large}

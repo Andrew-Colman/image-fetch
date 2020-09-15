@@ -14,6 +14,7 @@ export const GalleryProvider = ({ children }) => {
     per_page: 20,
     params: `&q=${encodeURIComponent('query')}&image_type=${'imageType'}&colors=$'{colors'}`,
     uri: `https://pixabay.com/api/?key=${API_KEY}`,
+    storage: Object.entries({ ...localStorage }),
   });
 
   function updateUrl(params, x) {

@@ -11,7 +11,7 @@ export default function GalleryGrid() {
   console.log(URL); */
   return (
     <>
-      <Row className="p-2">
+      <Row className="p-2 text-center d-flex justify-content-around overflow-hidden">
         {data.totalHits === 0 && (
           <div className="col text-white text-center lead"> no results...</div>
         )}
@@ -23,13 +23,16 @@ export default function GalleryGrid() {
         ) : (
           <>
             {data.hits.slice(0, values.quantity).map((img) => (
-              <Image
-                Id={img.id}
-                key={img.largeImageURL}
-                Large={img.largeImageURL}
-                Author={img.user}
-                Downloads={img.downloads}
-              />
+              <div className="animate__animated animate__fadeInUp animate__delay-1s">
+                <Image
+                  Id={img.id}
+                  key={img.largeImageURL}
+                  Large={img.largeImageURL}
+                  Author={img.user}
+                  Downloads={img.downloads}
+                  Home
+                />
+              </div>
             ))}
           </>
         )}
