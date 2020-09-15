@@ -1,8 +1,7 @@
 import React, { useState, createContext } from 'react';
 
-const API_KEY =
-  process.env.NODE_ENV === 'development' ? process.env.REACT_APP_API_KEY : process.env.API_KEY;
-console.log(process.env.NODE_ENV);
+const API_KEY = process.env.PIXABAY_API_KEY || process.env.REACT_APP_API_KEY;
+
 export const GalleryContext = createContext();
 
 export const GalleryProvider = ({ children }) => {
