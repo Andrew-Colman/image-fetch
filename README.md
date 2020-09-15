@@ -2,33 +2,59 @@
 
 This React App fetch pixabay api information then the app displays the results (Images with Author's name and number of downloads)
 
-*https://spectralapps.github.io/image-fetch/*
+_https://image-fetch.vercel.app/_
+
+> Users can search images and choose image colors
+
+> Image type (Photo/Vector/Illustration), limit the results (max 20)
+
+> Download any Image or save them to local /gallery
+
+### React Features:
 
 
-users can search images and choose image colors, image type(photo/vector/illustration), limit the results (max 20)
-(Download any Image)
+```js
+Hooks: useState, useEffect, useRef, useContext
 
 
-### React Hooks:
+-> Context Api
 
-useState, useEffect, useRef, useContext
+-> React.lazy
 
-Suspense: display useful loading states
+-> Suspense
 
-React lazy:  load different parts of the application only when they're needed (code-splitting)
+Custom react hooks: useQuery, useParams, useScroll, useLocalStorage
+```
 
-custom react hook: own forms and validation (no need to use 3rd party packages, like formik) 
 
-#### Additional packages:
-[React-Router](https://reactrouter.com/): allows us to build a single-page web application with navigation without the page refreshing as the user navigates
+#### Style:
+
+```js
+🔷 Bootstrap 4
+
+💅 Styled-components (custom css)
+
+📱  Responsive Web design
+```
+
+##### Additional packages:
 
 [Axios](https://github.com/axios/axios): Promise based HTTP client
 
-[reactstrap](https://reactstrap.github.io/): react bootstrap 4 components
+[Reactstrap](https://reactstrap.github.io/): Bootstrap 4 React components
 
-dot env: (if you clone this repo make a .env with REACT_APP_API_KEY=*your pixabay api key*)
-(https://pixabay.com/api/docs/)
+[React-router](https://reactrouter.com/): dynamic routes
 
+[Dot env](https://www.npmjs.com/package/dotenv): if you clone this repo make a .env file with
+
+
+```js
+REACT_APP_API_KEY='your pixabay api key' // (dev)
+
+API_KEY='your pixabay api key' // (production)
+
+get your key here: https://pixabay.com/api/docs/
+```
 
 ##### Style:
 Bootstrap 4 and styled-components, custom css 
@@ -36,4 +62,6 @@ Bootstrap 4 and styled-components, custom css
 
 > **[Pixabay](https://pixabay.com/) is a free public domain image repository (CC0)**
 
-Image cropping: https://github.com/spectralapps/image-crop
+
+_Related project: [image-crop](https://github.com/spectralapps/image-crop)_
+

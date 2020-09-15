@@ -1,13 +1,30 @@
 {
   "parser": "babel-eslint",
   "parserOptions": {
-  "sourceType": "module",
-  "allowImportExportEverywhere": false,
-  "codeFrame": false
-},
-    "extends": "react-app",
-    "plugins": ["prettier"],
-    "rules": {
-      "prettier/prettier": "error"
-    }
+    "sourceType": "module",
+    "allowImportExportEverywhere": false,
+    "codeFrame": false
+  },
+  "extends": ["airbnb", "airbnb/hooks", "prettier", "eslint:recommended"],
+  "env": {
+    "browser": true,
+    "es2020": true,
+    "jest": true
+  },
+  "ignorePatterns": ["build/*", "src/setupTests.js"],
+  "rules": {
+    "import/no-cycle": "off",
+    "max-len": ["error", { "code": 100 }],
+    "prefer-promise-reject-errors": ["off"],
+    "react/jsx-filename-extension": ["off"],
+    "react/prop-types": ["off"],
+    "no-return-assign": ["off"],
+    "react/destructuring-assignment": ["off", "always", { "ignoreClassFields": true }],
+    "react/jsx-one-expression-per-line": ["off", { "allow": "single-child" }],
+    "no-console": "off",
+    "max-lines": "off",
+    "no-unused-vars": "off",
+    "jsx-a11y/no-noninteractive-element-interactions": "off",
+    "jsx-a11y/click-events-have-key-events": "off"
   }
+}
