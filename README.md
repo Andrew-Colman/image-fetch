@@ -13,26 +13,25 @@ _https://image-fetch.vercel.app/_
 ### React Features:
 
 
-```js
+```rb
 Hooks: useState, useEffect, useRef, useContext
 
 
 -> Context Api
 
--> React.lazy
+-> React lazy
 
 -> Suspense
 
-Custom react hooks: useQuery, useParams, useScroll, useLocalStorage
+Custom react Hooks: useQuery, useParams, useScroll, useLocalStorage
 ```
-
-
+  
 #### Style:
 
-```js
+```rb
 🔷 Bootstrap 4
 
-💅 Styled-components (custom css)
+💅 Styled components (custom css)
 
 📱  Responsive Web design
 ```
@@ -53,11 +52,9 @@ REACT_APP_API_KEY='your pixabay api key' // (dev)
 
 API_KEY='your pixabay api key' // (production)
 
-get your key here: https://pixabay.com/api/docs/
+get your key here:
 ```
-
-##### Style:
-Bootstrap 4 and styled-components, custom css 
+ https://pixabay.com/api/docs/
 
 
 > **[Pixabay](https://pixabay.com/) is a free public domain image repository (CC0)**
