@@ -23,16 +23,14 @@ export default function GalleryGrid() {
         ) : (
           <>
             {data.hits.slice(0, values.quantity).map((img) => (
-              <div className="animate__animated animate__fadeInUp animate__delay-1s">
-                <Image
-                  Id={img.id}
-                  key={img.largeImageURL}
-                  Large={img.largeImageURL}
-                  Author={img.user}
-                  Downloads={img.downloads}
-                  Home
-                />
-              </div>
+              <Image
+                Id={img.id}
+                key={img.id}
+                Large={img.largeImageURL}
+                Author={img.user}
+                Downloads={img.downloads}
+                Home
+              />
             ))}
           </>
         )}
