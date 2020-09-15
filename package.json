@@ -1,6 +1,6 @@
 {
   "name": "image-fetch",
-  "version": "0.3.6",
+  "version": "0.4.7",
   "private": true,
   "homepage": "https://image-fetch.vercel.app/",
   "dependencies": {
@@ -15,7 +15,6 @@
     "react-spring": "^8.0.27",
     "react-toastify": "^6.0.8",
     "reactstrap": "^8.2.0",
-    "serialize-javascript": "^2.1.2",
     "styled-components": "^5.1.1"
   },
   "scripts": {
