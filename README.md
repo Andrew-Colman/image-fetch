@@ -12,8 +12,10 @@ _https://image-fetch.vercel.app/_
 
 ### React Features:
 
+
 ```js
 Hooks: useState, useEffect, useRef, useContext
+
 
 -> Context Api
 
@@ -23,6 +25,7 @@ Hooks: useState, useEffect, useRef, useContext
 
 Custom react hooks: useQuery, useParams, useScroll, useLocalStorage
 ```
+
 
 #### Style:
 
@@ -44,6 +47,7 @@ Custom react hooks: useQuery, useParams, useScroll, useLocalStorage
 
 [Dot env](https://www.npmjs.com/package/dotenv): if you clone this repo make a .env file with
 
+
 ```js
 REACT_APP_API_KEY='your pixabay api key' // (dev)
 
@@ -52,6 +56,12 @@ API_KEY='your pixabay api key' // (production)
 get your key here: https://pixabay.com/api/docs/
 ```
 
+##### Style:
+Bootstrap 4 and styled-components, custom css 
+
+
 > **[Pixabay](https://pixabay.com/) is a free public domain image repository (CC0)**
 
+
 _Related project: [image-crop](https://github.com/spectralapps/image-crop)_
+
