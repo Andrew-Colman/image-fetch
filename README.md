@@ -46,17 +46,22 @@ Custom react hooks: useQuery, useParams, useScroll, useLocalStorage
 [Dot env](https://www.npmjs.com/package/dotenv): Environment variables
 
 ```js
-//if you clone this repo make a .env file with:
+//if you clone this project make a .env file with: 
 REACT_APP_API_KEY='your pixabay api key' // (dev)
-
+REACT_APP_IMGBB_API_KEY='your imgbb api key' // (dev) <- used for saving in /gallery page
 PIXABAY_API_KEY='your pixabay api key' // (production)
-//and cors must be enabled in the host
+IMGBB_API_KEY='your imgbb api key' // (production) <- used for saving in /gallery page
 
-get your api key here:
+//cors must be enabled in the host
+
+get your api keys here:
 ```
 
 - https://pixabay.com/api/docs/
+- https://api.imgbb.com/
 
 > **[Pixabay](https://pixabay.com/) is a free public domain image repository (CC0)**
+
+> **[IMGBB](https://imgbb.com/) is a free image host**
 
 _Related project: [spectralapps/image-crop](https://github.com/spectralapps/image-crop)_
