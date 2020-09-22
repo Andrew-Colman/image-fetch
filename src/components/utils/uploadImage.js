@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 const axios = require('axios');
 
-const IMGBB_API_KEY = process.env.REACT_APP_IMGBB_API_KEY;
+const IMGBB_API_KEY = process.env.IMGBB_API_KEY || process.env.REACT_APP_IMGBB_API_KEY;
 
 // eslint-disable-next-line consistent-return
 export default async function uploadImage(url) {
