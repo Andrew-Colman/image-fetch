@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import uploadImage from './utils/uploadImage';
 import { GalleryContext } from './GalleryContext';
 
 const PREFIX = 'image-fetch-';
@@ -16,9 +17,11 @@ export default function useLocalStorage(key, initialValue) {
     return initialValue;
   });
 
-  const setTheValue = (fromValue) => {
+  const setTheValue = async (fromValue) => {
     try {
-      localStorage.setItem(prefixedKey, JSON.stringify(fromValue));
+      const savedURL = await uploadImage(fromValue);
+      console.log(`saved: ${savedURL}`);
+      localStorage.setItem(prefixedKey, JSON.stringify(savedURL));
       setValues({ ...values, storage: Object.entries({ ...localStorage }) });
     } catch (error) {
       console.log(error);
