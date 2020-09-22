@@ -11,6 +11,28 @@ const StyledHeader = styled.div`
   background-size: cover;
   width: 100%;
   margin: auto;
+
+  .icon-filter {
+    backdrop-filter: blur(2px);
+    border-radius: 50%;
+  }
+  .icon {
+    color: #33b5e5 !important;
+    &:hover {
+      color: #0099cc !important;
+    }
+  }
+  @media screen and (max-width: 700px) {
+    .icon-filter {
+      backdrop-filter: blur(5px);
+    }
+    .icon {
+      color: honeydew !important;
+      &:hover {
+        color: #444 !important;
+      }
+    }
+  }
 `;
 
 export default function Header() {
@@ -25,17 +47,35 @@ export default function Header() {
           <div style={{ backgroundColor: 'transparent' }} className="jumbotron px-4">
             <h1 className="display-4">Welcome</h1>
             <p className="lead">Spectral Apps fetch project</p>
-
-            <Button color="link" onClick={toggle} style={{ marginBottom: '1rem' }}>
-              <i className="fas fa-question-circle" />
-            </Button>
+            <div>
+              <Button
+                className="icon-filter"
+                as="a"
+                href="https://github.com/spectralapps/image-fetch"
+                target="_blank"
+                rel="noopener noreferrer"
+                color="link "
+              >
+                <i className="fab fa-2x fa-github icon" />
+              </Button>
+            </div>
+            <div>
+              <Button
+                className="icon-filter"
+                color="link"
+                onClick={toggle}
+                style={{ marginBottom: '1rem' }}
+              >
+                <i className="fas fa-question-circle icon" />
+              </Button>
+            </div>
             <Collapse className="row mt-2 px-3 text-center" isOpen={isOpen}>
               <Card className="col bg-dark">
                 <CardBody>
                   Description: Search Photos, Vectors and Illustrations from Pixabay
                   <br />
                   then the App displays the results (Images, Authors, number of downloads) (Download
-                  any Image)
+                  any Image or save in the gallery)
                 </CardBody>
               </Card>
             </Collapse>
