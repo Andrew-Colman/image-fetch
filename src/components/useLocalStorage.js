@@ -20,11 +20,10 @@ export default function useLocalStorage(key, initialValue) {
   const setTheValue = async (fromValue) => {
     try {
       const savedURL = await uploadImage(fromValue);
-      console.log(`saved: ${savedURL}`);
       localStorage.setItem(prefixedKey, JSON.stringify(savedURL));
       setValues({ ...values, storage: Object.entries({ ...localStorage }) });
-    } catch (error) {
-      console.log(error);
+    } catch (err) {
+      console.error(err);
     }
   };
 

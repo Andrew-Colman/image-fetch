@@ -8,8 +8,7 @@ export default async function uploadImage(url) {
   const params = new URLSearchParams();
   params.append('image', url);
 
-  const saveImage = ({ data }, oldUrl) => {
-    console.log({ id: data.id, url: `${data.image.url}`, oldUrl }); // save img to localStorage
+  const saveImage = ({ data }) => {
     const savedUrl = data.image.url;
     return savedUrl;
   };
@@ -21,8 +20,7 @@ export default async function uploadImage(url) {
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       params,
     });
-    console.log(result.data);
-    return saveImage(result.data, url); // <- send to localStorage
+    return saveImage(result.data); // <- send to localStorage
   } catch (error) {
     console.log(error);
   }
