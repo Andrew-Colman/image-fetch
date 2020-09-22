@@ -68,12 +68,16 @@ export default function NavbarLay() {
         </NavItem>
       </Nav>
 
-      <UncontrolledDropdown nav inNavbar className="d-flex d-md-none ">
+      <UncontrolledDropdown
+        nav
+        inNavbar
+        className="d-flex d-md-none animate__animated  animate__fadeInRightBig"
+      >
         <DropdownToggle nav>
           <i className="fas fa-bars fa-2x" />
         </DropdownToggle>
 
-        <DropdownMenu right>
+        <DropdownMenu right tag="div" className="animate__animated  animate__bounceInDown">
           <DropdownItem>
             <Link to="/">Home Page</Link>
           </DropdownItem>
