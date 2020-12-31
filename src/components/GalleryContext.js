@@ -6,21 +6,21 @@ export const GalleryContext = createContext();
 
 export const GalleryProvider = ({ children }) => {
   const [values, setValues] = useState({
-    query: 'query',
+    query: '',
     quantity: 12,
     imageType: 'photo',
     colors: '',
     per_page: 20,
-    params: `&q=${encodeURIComponent('query')}&image_type=${'imageType'}&colors=$'{colors'}`,
-    uri: `https://pixabay.com/api/?key=${API_KEY}`,
+    params: '',
+    uri: `https://pixabay.com/api/?key=${API_KEY}&safesearch=true`,
     storage: Object.entries({ ...localStorage }),
   });
 
-  function updateUrl(params, x) {
+  function updateUrl(params, quantity) {
     setValues({
       ...values,
-      uri: `https://pixabay.com/api/?key=${API_KEY}${params}`,
-      quantity: x,
+      uri: `https://pixabay.com/api/?key=${API_KEY}${params}&safesearch=true`,
+      quantity,
     });
   }
 
