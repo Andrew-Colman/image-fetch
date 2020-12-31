@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useState, useContext } from 'react';
 import Slider from 'react-input-slider';
 import { GalleryContext } from '../../../components/GalleryContext';

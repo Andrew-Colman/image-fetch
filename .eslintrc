@@ -5,7 +5,7 @@
     "allowImportExportEverywhere": false,
     "codeFrame": false
   },
-  "extends": ["airbnb", "airbnb/hooks", "prettier", "eslint:recommended"],
+  "extends": [ "prettier", "eslint:recommended"],
   "env": {
     "browser": true,
     "es2020": true,
@@ -13,7 +13,6 @@
   },
   "ignorePatterns": ["build/*", "src/setupTests.js"],
   "rules": {
-    "import/no-cycle": "off",
     "max-len": ["error", { "code": 100 }],
     "prefer-promise-reject-errors": ["off"],
     "react/jsx-filename-extension": ["off"],
@@ -24,7 +23,6 @@
     "no-console": "off",
     "max-lines": "off",
     "no-unused-vars": "off",
-    "jsx-a11y/no-noninteractive-element-interactions": "off",
-    "jsx-a11y/click-events-have-key-events": "off"
+    "no-undef": "off"
   }
 }
