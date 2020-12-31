@@ -32,7 +32,7 @@ Custom react hooks: useQuery, useParams, useScroll, useLocalStorage
 
 💅 Styled components (custom css)
 
-📱  Responsive Web design
+📱 Responsive Web design
 ```
 
 ##### Additional packages:
@@ -46,13 +46,13 @@ Custom react hooks: useQuery, useParams, useScroll, useLocalStorage
 [Dot env](https://www.npmjs.com/package/dotenv): Environment variables
 
 ```js
-//if you clone this project make a .env file with: 
+// if you clone this project make a .env file with: 
 REACT_APP_API_KEY='your pixabay api key' // (dev)
 REACT_APP_IMGBB_API_KEY='your imgbb api key' // (dev) <- used for saving in /gallery page
 PIXABAY_API_KEY='your pixabay api key' // (production)
 IMGBB_API_KEY='your imgbb api key' // (production) <- used for saving in /gallery page
 
-//cors must be enabled in the host
+// cors must be enabled in the host
 
 get your api keys here:
 ```
