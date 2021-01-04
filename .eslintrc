@@ -5,7 +5,7 @@
     "allowImportExportEverywhere": false,
     "codeFrame": false
   },
-  "extends": [ "prettier", "eslint:recommended"],
+  "extends": [ "prettier", "react-app"],
   "env": {
     "browser": true,
     "es2020": true,
@@ -22,7 +22,7 @@
     "react/jsx-one-expression-per-line": ["off", { "allow": "single-child" }],
     "no-console": "off",
     "max-lines": "off",
-    "no-unused-vars": "off",
-    "no-undef": "off"
+    "no-undef": "off",
+    "no-unused-vars": ["off"]
   }
 }

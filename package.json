@@ -23,15 +23,6 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "shared-config"
-    ],
-    "rules": {
-      "additional-rule": "warn"
-    }
-  },
   "browserslist": {
     "production": [
       ">0.2%",
