@@ -8,7 +8,10 @@ This React App fetch **Pixabay** api information then displays a gallery of imag
 
 ## _https://image-fetch.vercel.app/_
 
+![dog](./.github/images/dog.jpg)
+
 ![cat](./.github/images/cat.jpg)
+
 ![car](./.github/images/car.jpg)
 
 ![earth](./.github/images/earth.jpg)
