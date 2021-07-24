@@ -77,6 +77,12 @@ REACT_APP_API_KEY = 'your pixabay api key'; // (dev)
 REACT_APP_IMGBB_API_KEY = 'your imgbb api key'; // (dev)
 ```
 
+then run:
+
+```sh
+vercel dev # to run serverless api endpoint and it will run start command
+```
+
 get your api keys here:
 
 - https://pixabay.com/api/docs/
