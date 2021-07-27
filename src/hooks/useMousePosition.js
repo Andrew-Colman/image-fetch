@@ -3,11 +3,11 @@ import { useState, useEffect, useMemo } from 'react';
 const throttle = require('lodash/throttle');
 
 /**
- *
- * @returns {{pos:boolean}} position is in center radius
+ * calculates if Mouse Position is near center of screen
+ * @returns {boolean} mouse position is in center radius
  */
 const useMousePosition = () => {
-  const [mousePosition, setMousePosition] = useState({});
+  const [mousePosition, setMousePosition] = useState(false);
 
   const calculateMousePosition = (ev) => {
     const x = ev.pageX; //mouse x in page
@@ -31,14 +31,8 @@ const useMousePosition = () => {
 
     const pos = centered.w + centered.h < threshold;
 
-    //console.log(x, y);
-
-    console.log(pos);
-
     if (ev.pageY < h) {
-      setMousePosition({
-        pos: !!pos,
-      });
+      setMousePosition(!!pos);
     }
   };
 
