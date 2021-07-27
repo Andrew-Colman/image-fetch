@@ -10,9 +10,9 @@ import {
 
 import useToasts from './useToasts';
 
-export default function useFavoriteImage(_Id, Large, Location) {
+export default function useFavoriteImage(imageId, imageUrl, location) {
   const favorites = useSelector(selectFavorites);
-  const [isFavorite, setIsFavorite] = useState(favorites.some((e) => e.id === _Id));
+  const [isFavorite, setIsFavorite] = useState(favorites.some((e) => e.id === imageId));
 
   const [isDisabled, setIsDisabled] = useState(false);
 
@@ -27,16 +27,16 @@ export default function useFavoriteImage(_Id, Large, Location) {
       if (isFavorite === false) {
         try {
           notify('Saved to your gallery', { delay: 2000 });
-          const { data } = await axios.post('/api/favorite', { url: Large });
+          const { data } = await axios.post('/api/favorite', { url: imageUrl });
 
-          dispatch(addFavorite(parseData(_Id, data)));
+          dispatch(addFavorite(parseData(imageId, data)));
           dispatch(saveFavorites());
         } catch (error) {
           notify("Error, Can't save to your gallery", { delay: 2000 });
           setIsFavorite(false);
         }
       } else {
-        dispatch(removeFavorite(_Id));
+        dispatch(removeFavorite(imageId));
         dispatch(saveFavorites());
         notify(`Removed from your gallery`, { transition: 'flip', delay: 2000 });
       }
@@ -45,10 +45,10 @@ export default function useFavoriteImage(_Id, Large, Location) {
   };
 
   useEffect(() => {
-    if (Location === 'gallery') {
+    if (location === 'gallery') {
       setIsFavorite(true);
     }
-  }, [Location]);
+  }, [location]);
 
   return { isFavorite, toggleIsFavorite, isDisabled };
 }
