@@ -1,6 +1,6 @@
 const axios = require('axios');
 
-const API_KEY = process.env.API_KEY || process.env.REACT_APP_API_KEY;
+const API_KEY = process.env.PIXABAY_API_KEY || process.env.REACT_APP_API_KEY;
 
 export default async function query(req, res) {
   const { query = '', imageType = 'photo', colors = '', per_page = 20 } = req.body;
