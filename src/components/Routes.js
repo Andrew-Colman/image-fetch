@@ -13,8 +13,8 @@ export default function Routes() {
   return (
     <>
       <Router>
+        <Navbar />
         <Suspense fallback={<Loading />}>
-          <Navbar />
           <Switch>
             <Route exact path="/">
               <Home />
