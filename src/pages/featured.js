@@ -1,16 +1,22 @@
 import React from 'react';
-import { Col, Row } from 'reactstrap';
+import { Container } from 'reactstrap';
+import styled from 'styled-components';
 import FeaturedCarousel from '../components/Carousel';
+
+const StyledContainer = styled(Container)`
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+`;
 
 export default function FeaturedPage() {
   return (
     <>
-      <Row className="container-fluid">
-        <Col className="m-3 p-2 text-center">
-          <FeaturedCarousel />
-        </Col>
-        <hr />
-      </Row>
+      <StyledContainer>
+        <FeaturedCarousel />
+      </StyledContainer>
     </>
   );
 }
