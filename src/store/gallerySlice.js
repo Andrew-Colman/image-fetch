@@ -21,6 +21,7 @@ const fetchData = async () => {
 
     store.dispatch(set({ images: data, number: 1, status: 'success' }));
   } catch (error) {
+    store.dispatch(set({ status: 'error' }));
     console.log(error);
   }
 };
