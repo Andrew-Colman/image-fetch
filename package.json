@@ -1,21 +1,27 @@
 {
   "name": "image-fetch",
-  "version": "0.4.7",
+  "version": "0.5.0",
   "private": true,
   "homepage": "https://image-fetch.vercel.app/",
   "dependencies": {
+    "@reduxjs/toolkit": "^1.6.1",
     "axios": "^0.21.1",
+    "chroma-js": "^2.1.2",
     "dotenv": "^8.2.0",
+    "lodash": "^4.17.21",
     "nanoid": "^3.1.11",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-input-slider": "^6.0.0",
+    "react-redux": "^7.2.4",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
+    "react-select": "^4.3.1",
     "react-spring": "^8.0.27",
     "react-toastify": "^6.0.8",
     "reactstrap": "^8.2.0",
-    "styled-components": "^5.1.1"
+    "styled-components": "^5.1.1",
+    "swiper": "^6.7.5"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -36,14 +42,12 @@
     ]
   },
   "devDependencies": {
+    "@vercel/node": "^1.11.1",
     "babel-eslint": "10.1.0",
-    "enzyme": "^3.11.0",
-    "enzyme-adapter-react-16": "^1.15.4",
     "eslint-config-prettier": "^7.1.0",
     "eslint-plugin-import": "2.22.1",
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "7.22.0",
-    "jest-enzyme": "^7.1.2",
     "prettier": "^2.0.5"
   }
 }

@@ -2,11 +2,25 @@
 
 This React App fetch **Pixabay** api information then displays a gallery of images with Author's name and number of total downloads
 
+- ### 🤩 sweet images updated daily
+
+- ### ❓ cars, cats, backgrounds, search for _anything_
+
 ## _https://image-fetch.vercel.app/_
+
+![dog](./.github/images/dog.jpg)
+
+![cat](./.github/images/cat.jpg)
+
+![car](./.github/images/car.jpg)
+
+![earth](./.github/images/earth.jpg)
+
+![girl](https://i.ibb.co/XV5tdRD/53e7d343485ba914f6da8c7dda79367a1739dde056576c48732f7dd79545c05cba-1280.jpg)
 
 > Users can search images and choose image colors
 
-> Image type (Photo/Vector/Illustration), limit the results (max 20)
+> Image type (Photo/Vector/Illustration), limit the results per page (max 20)
 
 > Download any Image or save them to local /gallery
 
@@ -16,19 +30,21 @@ This React App fetch **Pixabay** api information then displays a gallery of imag
 Hooks: useState, useEffect, useRef, useContext
 
 
--> Context Api #state management
+-> Redux # state management
 
--> React lazy #code splitting
+-> React lazy # code splitting
 
--> Suspense #useful loading states
+-> Suspense # useful loading states
 
-Custom react hooks: useQuery, useParams, useScroll, useLocalStorage
+-> Vercel serverless # api
+
+-> My Custom react hooks: useQuery, useParams, useScroll, useLocalStorage, and more...
 ```
 
 ### Style:
 
 ```rb
-🔷 Bootstrap 4
+🔷 Bootstrap
 
 💅 Styled components (custom css)
 
@@ -39,9 +55,9 @@ Custom react hooks: useQuery, useParams, useScroll, useLocalStorage
 
 [Axios](https://github.com/axios/axios): Promise based HTTP client
 
-[Reactstrap](https://reactstrap.github.io/): Bootstrap 4 React components
+[Reactstrap](https://reactstrap.github.io/): Bootstrap React components
 
-[React-router](https://reactrouter.com/): Dynamic routes
+[React-router](https://reactrouter.com/): Dynamic client-side routes
 
 [Dot env](https://www.npmjs.com/package/dotenv): Environment variables
 
@@ -62,6 +78,12 @@ Any pull request will trigger a build
 ```js
 REACT_APP_API_KEY = 'your pixabay api key'; // (dev)
 REACT_APP_IMGBB_API_KEY = 'your imgbb api key'; // (dev)
+```
+
+then run:
+
+```sh
+vercel dev # to run serverless api endpoint and it will run start command
 ```
 
 get your api keys here:
