@@ -5,8 +5,6 @@ const API_KEY = process.env.PIXABAY_API_KEY || process.env.REACT_APP_API_KEY;
 export default async function query(req, res) {
   const { query = '', imageType = 'photo', colors = '', per_page = 20 } = req.body;
 
-  console.log(API_KEY);
-
   const params = `&q=${encodeURIComponent(
     query
   )}&image_type=${imageType}&colors=${colors}&per_page=${per_page}`;
