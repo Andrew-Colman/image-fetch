@@ -9,7 +9,7 @@
     "chroma-js": "^2.1.2",
     "dotenv": "^8.2.0",
     "lodash": "^4.17.21",
-    "nanoid": "^3.1.11",
+    "nanoid": "^3.1.31",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-input-slider": "^6.0.0",
